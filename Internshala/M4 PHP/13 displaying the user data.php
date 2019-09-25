@@ -12,4 +12,10 @@ $row=mysqli_fetch_array($select_query_result);
 echo $row['id']."<br/>";
 echo $row['email']."<br/>";
 echo $row['first_name'];
+//mysqli_fetch_array contains an inbuild array now when the command is run again for the second time it will fetch the second record
+$row=mysqli_fetch_array($select_query_result);
+echo $row['id']."<br/>";
+echo $row['email']."<br/>";
+echo $row['first_name'];
+
 ?>
