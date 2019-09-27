@@ -1,6 +1,6 @@
 <?php
 if (isset($_SESSION['email'])) {
-  header('location: products.php');
+  header('location: pages/products.php');
 }
 ?>
 <!doctype html>
@@ -13,7 +13,7 @@ if (isset($_SESSION['email'])) {
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Index</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="pages/css/index.css">
   </head>
   <body>
 
@@ -29,7 +29,7 @@ if (isset($_SESSION['email'])) {
       </div>
     </div>
 
-  <?php include 'pages/include/footer.php' ?>
+  <?php include 'pages/includes/footer.php' ?>
 
   </body>
 </html>

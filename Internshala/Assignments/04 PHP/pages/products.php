@@ -1,4 +1,4 @@
-<?php inculde "include/common.php" ?>
+<?php include "includes/common.php" ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,7 +9,7 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Products</title>
-    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="css/products.css">
   </head>
   <body>
 
@@ -173,8 +173,11 @@
          </div>
         </div>
       </div>
-
-      <?php include 'include/footer.php' ?>
-
-    </body>
-  </html>
+    <footer class="footer">
+    <div class="container">
+      <center>Copyright © Lifestyle Store | All Rights
+          Reserved | Contact Us: +91 90000 00000</center>
+    </div>
+    </footer>
+  </body>
+</html>

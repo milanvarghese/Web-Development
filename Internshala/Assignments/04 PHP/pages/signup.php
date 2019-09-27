@@ -1,5 +1,5 @@
 <?php 
-require ("include/common.php")
+require "includes/common.php";
 if (isset($_SESSION['email'])){
     header('location: products.php');
 }
@@ -14,7 +14,6 @@ if (isset($_SESSION['email'])){
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../css/signup.css">
   </head>
   <body>
@@ -68,7 +67,7 @@ if (isset($_SESSION['email'])){
         </div>
       </div>
 
-      <?php include 'include/footer.php' ?>
+      <?php include 'includes/footer.php' ?>
       
     </body>
   </html>
