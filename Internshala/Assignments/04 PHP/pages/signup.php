@@ -1,4 +1,9 @@
-<?php inculde "include/common.php" ?>
+<?php 
+require ("include/common.php")
+if (isset($_SESSION['email'])){
+    header('location: products.php');
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -24,18 +29,28 @@
                   <h3 class="panel-title">SIGN UP</h3>
                </div>
               <div class="panel-body">
-                <form class="form">
+                <form class="form" method="POST" action="signup_script.php">
                   <div class="form-group">
-                    <input type="text" class="form-control" name="name" placeholder="Name" required>
+                    <input type="text" class="form-control" name="name" placeholder="Name" pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" required>
                   </div>
                   <div class="form-group">
-                    <input type="email" class="form-control" name="email" placeholder="Email" required>
+                    <input type="email" class="form-control" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                    <?php
+                    if(isset($_GET["m1"])){
+                      echo $_GET['m1'];
+                    }
+                    ?>
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                    <input type="password" class="form-control" name="password" placeholder="Password" pattern=".{6,}" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" name="contact" placeholder="Contact" required>
+                    <input type="text" class="form-control" name="contact" placeholder="Contact" maxlength="10" required>
+                    <?php
+                    if(isset($_GET["m1"])){
+                      echo $_GET['m1'];
+                    }
+                    ?>
                   </div>
                   <div class="form-group">
                       <input type="text" class="form-control" name="city" placeholder="City" required>

@@ -1,4 +1,9 @@
-<?php inculde "include/common.php" ?>
+<?php
+require("includes/common.php");
+if (!isset($_SESSION['email'])) {
+    header('location: index.php');
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,16 +28,21 @@
                 <h3 class="Change Heading">Change Password</h3>
               </div>
               <div class="panel-body">
-                <form class="form">
+                <form class="form" action="settings_script.php" method="POST">
                   <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Old Password" required>
+                    <input type="password" class="form-control" pattern=".{6,}" name="old_password" placeholder="Old Password" required>
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control" placeholder="New Password" required>
+                    <input type="password" class="form-control" pattern=".{6,}" name="new_password" placeholder="New Password" required>
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Re-type New Password" required>
+                    <input type="password" class="form-control" pattern=".{6,}" name="repnew_password" placeholder="Re-type New Password" required>
                   </div>
+                  <?php
+                    if(isset($_GET["error"])){
+                      echo $_GET['error'];
+                    }
+                  ?>
                   <div class="form-group">
                     <button class="btn btn-primary">Submit</button>
                   </div>

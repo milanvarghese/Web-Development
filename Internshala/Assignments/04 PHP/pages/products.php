@@ -13,7 +13,9 @@
   </head>
   <body>
 
-  <?php include 'includes/header.php'; ?>
+  <?php include 'includes/header.php'; 
+  include 'includes/check-if-added.php';
+  ?>
 
       <div class="container">
         <div class="content">
