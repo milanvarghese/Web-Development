@@ -1,6 +1,6 @@
 <?php
 if (isset($_SESSION['email'])) {
-  header('location: pages/products.php');
+  header('location: products.php');
 }
 ?>
 <!doctype html>
@@ -13,23 +13,23 @@ if (isset($_SESSION['email'])) {
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Index</title>
-    <link rel="stylesheet" href="pages/css/index.css">
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
 
-<?php include 'pages/includes/header.php'; ?>
+<?php include 'includes/header.php'; ?>
 
     <div id="banner_image">
       <div class="container">
           <div id="banner_content">
             <h1>Lifestyle Store</h1>
                 <p>We sell lifestyle.</p>
-              <a href="pages/products.php" class="btn btn-danger btn-lg-active">Shop Now</a>
+              <a href="products.php" class="btn btn-danger btn-lg-active">Shop Now</a>
           </div>
       </div>
     </div>
 
-  <?php include 'pages/includes/footer.php' ?>
+  <?php include 'includes/footer.php' ?>
 
   </body>
 </html>
