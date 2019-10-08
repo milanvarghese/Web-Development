@@ -1,0 +1,36 @@
+.navbar-nav{
+    float: right; 
+}
+
+#navbarToggler{
+    float: center;
+    padding-left: 48%;
+    position: relative;
+}
+#navitem{
+    color: white;
+}
+
+#collapse{
+    float: right;
+}
+.card{
+    background-color: grey;
+    width:18rem;
+    margin-left: 1%;
+    margin-top:  1%;
+}
+
+body{
+    background-color: gray;
+    color: #ffffffd5;
+}
+p{
+    font-size:20px; 
+}
+#main_content{
+    background-color: grey;
+    margin-top: 1%;
+    margin-left: 1%;
+    padding: 1% !important;
+}
